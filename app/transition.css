@@ -1,0 +1,41 @@
+.ciao-i {
+  --i-open-x: 0;
+  --i-open-y: .012;
+  position: relative;
+  z-index: 6;
+  display: inline-grid;
+  width: .28em;
+  height: .78em;
+  margin-left: .015em;
+  place-items: center;
+  align-self: center;
+  isolation: isolate;
+}
+
+.ciao-i::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  top: 50%;
+  width: 115vw;
+  height: 115vh;
+  background: var(--orange);
+  transform: translate(-50%, -50%) scaleX(var(--i-open-x)) scaleY(var(--i-open-y));
+  transform-origin: 50% 50%;
+  will-change: transform;
+}
+
+.ciao-i-glyph {
+  display: block;
+  color: var(--orange);
+  font: inherit;
+  font-style: italic;
+  line-height: .7;
+  will-change: transform;
+}
+
+.ciao-title::before,
+.ciao-title::after {
+  display: none;
+}
