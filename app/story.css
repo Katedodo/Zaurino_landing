@@ -117,7 +117,7 @@
   color: var(--ivory);
   transition: color .2s;
 }
-.projects-illustration { position: absolute; z-index: 0; inset: 0; opacity: 0; overflow: hidden; }
+.projects-illustration { position: absolute; z-index: 0; inset: 0; opacity: 1; overflow: hidden; }
 .projects-illustration img { object-fit: cover; object-position: center; filter: saturate(.82) contrast(.96); will-change: transform; }
 .projects-portrait { position:absolute; z-index:0; inset:0; opacity:0; overflow:hidden; }
 .projects-portrait img { object-fit:cover; object-position:center; filter:saturate(.86) contrast(.98); }
