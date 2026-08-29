@@ -6,10 +6,10 @@ export const metadata={
 export default function Privacy(){
   return <main className="privacy-page">
     <header className="privacy-header">
-      <a className="privacy-brand" href="/" aria-label="На главную">
+      <a className="privacy-brand" href="/Zaurino_landing/" aria-label="На главную">
         <span className="privacy-logo" aria-hidden="true"/><span>ZAURINO<br/>ACCADEMIA</span>
       </a>
-      <a className="privacy-back" href="/">На главную <span>↗</span></a>
+      <a className="privacy-back" href="/Zaurino_landing/">На главную <span>↗</span></a>
     </header>
     <div className="privacy-hero"><small>LEGAL · 2026</small><h1>Политика<br/><em>конфиденциальности</em></h1><p>Мы бережно относимся к данным, которыми вы делитесь, когда обращаетесь в Zaurino Accademia.</p></div>
     <div className="privacy-layout">
@@ -25,6 +25,6 @@ export default function Privacy(){
         <section><h2>07 <span>Изменения политики</span></h2><p>Мы можем обновлять эту страницу, если меняются сайт, сервисы или требования законодательства. Актуальная версия всегда доступна по этому адресу.</p></section>
       </article>
     </div>
-    <footer className="privacy-footer"><span>ZAURINO ACCADEMIA · ITALIANO COME STILE DI VITA</span><a href="/">Вернуться на сайт ↗</a></footer>
+    <footer className="privacy-footer"><span>ZAURINO ACCADEMIA · ITALIANO COME STILE DI VITA</span><a href="/Zaurino_landing/">Вернуться на сайт ↗</a></footer>
   </main>
 }
