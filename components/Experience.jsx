@@ -30,7 +30,7 @@ export default function Experience(){
       .to('.ciao-i',{ '--i-open-x':1,duration:.01},.69)
       .to('.ciao-i-glyph',{opacity:0,duration:.01},.69)
       .to('.ciao-i',{ '--i-open-y':1,ease:'power3.inOut'},.7)
-      .to('.hero-stage',{backgroundColor:'#ef5c1a',duration:.01},.98);
+      .to('.hero-stage',{backgroundColor:'#ef5c1a',duration:.01},.78);
     const portrait=gsap.timeline({scrollTrigger:{trigger:'.portrait-wrap',start:'top top',end:'bottom bottom',scrub:1}});
     portrait.set('.zaur-thought--one',{opacity:1,y:0},0)
       .to('.zaur-thought--one',{opacity:1,duration:.24},0)
@@ -47,7 +47,7 @@ export default function Experience(){
     const mobileChapter=matchMedia('(max-width: 720px)').matches;
     const chapter=gsap.timeline({scrollTrigger:{trigger:'.newchapter-wrap',start:'top top',end:'bottom bottom',scrub:1}});
     chapter.fromTo('.projects-illustration',{opacity:0,clipPath:'inset(0 0 0 100%)',scale:1.08},{opacity:1,clipPath:'inset(0 0 0 0%)',scale:1,duration:.18},.02)
-      .fromTo('.diplomacy-photo-main',{objectPosition:mobileChapter?'100% center':'78% center',scale:mobileChapter?1:1.12},{objectPosition:mobileChapter?'0% center':'22% center',scale:mobileChapter?1:1.04,ease:'none',duration:.25},.03)
+      .fromTo('.diplomacy-photo-main',{objectPosition:'center center',x:mobileChapter?0:0,scale:mobileChapter?1:1.12},{objectPosition:'center center',x:mobileChapter?'-80vw':0,scale:mobileChapter?1:1.04,ease:'none',duration:.25},.03)
       .to('.diplomacy-photo',{opacity:0,duration:.1},.25)
       .fromTo('.projects-portrait',{opacity:0,scale:1.06},{opacity:1,scale:1,duration:.16},.25)
       .to('.newchapter-stage',{backgroundColor:'#f4efe5',color:'#171914',duration:.01},.27)

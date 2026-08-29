@@ -325,7 +325,7 @@
   .projects-illustration img { object-position: center; }
   .projects-veil { background: rgba(244,239,229,.3); }
   .diplomacy-photo { left:0; width:100%; }
-  .diplomacy-photo img.diplomacy-photo-main { object-fit:cover; object-position:100% center; filter:saturate(.86) contrast(1.02); will-change:object-position,transform; }
+  .diplomacy-photo img.diplomacy-photo-main { left:auto !important; right:0 !important; width:175% !important; max-width:none !important; object-fit:cover; object-position:center center; filter:saturate(.86) contrast(1.02); will-change:transform; }
   .projects-portrait img { object-position:66% center; }
   .projects-portrait + .projects-veil { background:rgba(244,239,229,.76); }
   .chapter-academia-mark { width: 86px; height: 86px; margin-bottom: 18px; }
