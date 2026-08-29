@@ -9,7 +9,7 @@
 .om-nav[data-tone="orange"] .om-logo { background:var(--orange); }
 .om-nav[data-tone="green"] .om-logo { background:var(--cream); }
 .om-nav[data-tone="beige"] .om-logo { background:var(--cream); }
-.om-logo { display:block; width:38px; height:38px; flex:0 0 38px; background:var(--orange); -webkit-mask:url('/image/logo-accademia.png') center/contain no-repeat; mask:url('/image/logo-accademia.png') center/contain no-repeat; transition:background-color .35s ease; }
+.om-logo { display:block; width:38px; height:38px; flex:0 0 38px; background:var(--orange); -webkit-mask:url('/Zaurino_landing/image/logo-accademia.png') center/contain no-repeat; mask:url('/Zaurino_landing/image/logo-accademia.png') center/contain no-repeat; transition:background-color .35s ease; }
 .om-nav button { position:relative; overflow:hidden; border:1px solid transparent; border-radius:2px; background:#ef5c1a !important; color:#171914 !important; mix-blend-mode:normal; padding:10px 17px; letter-spacing:.12em; transition:transform .25s ease,border-color .25s ease; }
 .om-nav[data-tone="beige"] button { border-color:rgba(244,239,229,.72); }
 .om-nav button::after { content:''; position:absolute; left:-105%; bottom:0; width:100%; height:2px; background:var(--ink); transition:left .45s cubic-bezier(.2,.75,.25,1); }
@@ -39,7 +39,7 @@
 .final-price { color:var(--ink); }
 .final-price span { color:rgba(23,25,20,.6); }
 .footer-brand { display:flex; align-items:center; gap:9px; }
-.footer-logo { display:block; width:30px; height:30px; background:var(--orange); -webkit-mask:url('/image/logo-accademia.png') center/contain no-repeat; mask:url('/image/logo-accademia.png') center/contain no-repeat; }
+.footer-logo { display:block; width:30px; height:30px; background:var(--orange); -webkit-mask:url('/Zaurino_landing/image/logo-accademia.png') center/contain no-repeat; mask:url('/Zaurino_landing/image/logo-accademia.png') center/contain no-repeat; }
 .footer-brand>span:last-child { font-size:7px; letter-spacing:.16em; line-height:1.35; }
 .final-inner textarea { display:block; width:100%; min-height:76px; resize:vertical; border:0; border-bottom:1px solid var(--line); background:transparent; padding:12px 0; color:var(--ink); font-size:13px; line-height:1.45; }
 .final-inner textarea:focus { outline:0; border-color:var(--orange); }
@@ -412,7 +412,7 @@
 .privacy-page { min-height:100vh; background:var(--ivory); color:var(--ink); }
 .privacy-header { display:flex; align-items:center; justify-content:space-between; padding:24px max(20px,calc((100vw - 1280px)/2)); }
 .privacy-brand { display:flex; align-items:center; gap:10px; color:var(--ink); text-decoration:none; font-size:8px; letter-spacing:.16em; line-height:1.35; }
-.privacy-logo { width:36px; height:36px; background:var(--orange); -webkit-mask:url('/image/logo-accademia.png') center/contain no-repeat; mask:url('/image/logo-accademia.png') center/contain no-repeat; }
+.privacy-logo { width:36px; height:36px; background:var(--orange); -webkit-mask:url('/Zaurino_landing/image/logo-accademia.png') center/contain no-repeat; mask:url('/Zaurino_landing/image/logo-accademia.png') center/contain no-repeat; }
 .privacy-back { color:var(--ink); font-size:9px; letter-spacing:.13em; text-decoration:none; border-bottom:1px solid var(--orange); padding-bottom:7px; }
 .privacy-back span { color:var(--orange); margin-left:10px; }
 .privacy-hero { max-width:1280px; margin:0 auto; padding:13vh max(20px,6vw) 12vh; border-bottom:1px solid var(--line); }
