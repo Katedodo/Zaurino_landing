@@ -337,7 +337,7 @@
   .orange-facts { gap: 16px; margin-top: 24px; }
   .orange-facts span { font-size: 6px; }
   .orange-facts b { font-size: 26px; }
-  .story-wrap { height: 250svh; }
+  .story-wrap { height: 340svh; }
   .punto-wrap { height: 165svh; }
   .punto-copy { width: calc(100vw - 36px); }
   .punto-copy h2 { font-size: 16vw; line-height: .78; }
