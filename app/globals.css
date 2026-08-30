@@ -13,4 +13,3 @@
 .ciao-title{perspective:1200px;transform-style:preserve-3d}.ciao-letter{backface-visibility:visible;transform-style:preserve-3d}.ciao-letter:nth-child(2){position:relative;z-index:5}
 
 .ciao-title{--cover-lines:1}.ciao-title:before,.ciao-title:after{opacity:var(--cover-lines);transition:opacity .15s}.hero-reveal{background:var(--orange);color:var(--ink)}.hero-reveal-mark{border-color:rgba(23,25,20,.35);background:rgba(244,239,229,.12)}.hero-reveal-index{color:rgba(23,25,20,.55)}.hero-reveal-index b{color:var(--ivory)}.hero-reveal-copy h2 em{color:var(--olive)}.hero-reveal-copy p{color:rgba(23,25,20,.68)}.editorial-rule{border-color:rgba(23,25,20,.28);color:rgba(23,25,20,.65)}.editorial-rule i{color:var(--ivory)}
-:root{--font-sans:"Helvetica Neue",Helvetica,Arial,sans-serif;--font-serif:"Iowan Old Style","Baskerville","Times New Roman",serif}
