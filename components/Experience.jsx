@@ -21,8 +21,8 @@ export default function Experience(){
     const mobileChapter=window.matchMedia('(max-width: 720px)').matches;
     const hero=gsap.timeline({scrollTrigger:{trigger:'.hero-wrap',start:'top top',end:'bottom bottom',scrub:1,onUpdate:self=>{const header=document.querySelector('.om-nav');if(header)header.setAttribute('data-tone',self.progress>.72?'beige':'hero')}}});
     hero.to('.ciao-letter:nth-child(1)',{x:'-65vw',rotation:-8,ease:'power2.in'},0)
-      .to('.ciao-letter:nth-child(3)',{x:'18vw',y:mobileChapter?'0vh':'-90vh',rotation:10,ease:'power2.in'},0)
-      .to('.ciao-letter:nth-child(4)',{x:'66vw',rotation:8,ease:'power2.in'},0)
+      .to('.ciao-letter:nth-child(3)',{x:mobileChapter?'110vw':'18vw',y:mobileChapter?'0vh':'-90vh',opacity:mobileChapter?0:1,rotation:10,ease:'power2.in'},0)
+      .to('.ciao-letter:nth-child(4)',{x:mobileChapter?'110vw':'66vw',opacity:mobileChapter?0:1,rotation:8,ease:'power2.in'},0)
       .to('.ciao-letter:nth-child(5)',{x:'30vw',y:mobileChapter?'0vh':'90vh',ease:'power2.in'},0)
       .to('.hero-sub,.hero-scroll,.cover-meta',{opacity:0},0)
       .to('.ciao-title',{'--cover-lines':0},0)
@@ -47,8 +47,8 @@ export default function Experience(){
       .to('.zaur-story-photo img',{scale:1.04},.7);
     const chapter=gsap.timeline({scrollTrigger:{trigger:'.newchapter-wrap',start:'top top',end:'bottom bottom',scrub:1}});
     chapter.fromTo('.projects-illustration',{opacity:1,clipPath:'inset(0 0 0 0%)',scale:1.03},{opacity:1,clipPath:'inset(0 0 0 0%)',scale:1,duration:.08},0)
-      .fromTo('.diplomacy-photo-main',{objectPosition:mobileChapter?'100% center':'center center',x:0,scale:mobileChapter?1.02:1.12},{objectPosition:mobileChapter?'0% center':'center center',x:0,scale:mobileChapter?1:1.04,ease:'none',duration:.42},.02)
-      .to('.diplomacy-photo',{opacity:0,duration:.12},.58)
+      .fromTo('.diplomacy-photo-main',{objectPosition:mobileChapter?'100% center':'center center',x:0,scale:mobileChapter?1.02:1.12},{objectPosition:mobileChapter?'0% center':'center center',x:0,scale:mobileChapter?1:1.04,ease:'none',duration:mobileChapter?.68:.42},.02)
+      .to('.diplomacy-photo',{opacity:0,duration:.12},mobileChapter?.84:.58)
       .fromTo('.projects-portrait',{opacity:0,scale:1.06},{opacity:1,scale:1,duration:.16},.25)
       .to('.newchapter-stage',{backgroundColor:'#f4efe5',color:'#171914',duration:.01},.27)
       .to('.projects-veil',{opacity:1,duration:.12},.26)
@@ -80,11 +80,11 @@ export default function Experience(){
     requestAnimationFrame(()=>ScrollTrigger.refresh());
     window.addEventListener('load',()=>ScrollTrigger.refresh(),{once:true});
   },root);return()=>ctx.revert()},[]);
-  async function submit(e){e.preventDefault();setStatus('loading');try{const res=await fetch('/api/lead',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(form)});const data=await res.json();if(!res.ok)throw new Error();setStatus(data.demo?'demo':'success')}catch{setStatus('demo')}}
+  function submit(e){e.preventDefault();const text=`Здравствуйте, Заур! Меня зовут ${form.name}. ${form.message} Мой контакт: ${form.contact}`;window.open(`https://wa.me/393454680636?text=${encodeURIComponent(text)}`,'_blank','noopener,noreferrer');setStatus('success')}
   return <main ref={root} className="oldmoney-root">
     <header className="om-nav" data-tone="hero"><div><span className="om-logo" role="img" aria-label="Zaurino Accademia"/><span>ZAURINO<br/>ACCADEMIA</span></div><button onClick={()=>document.querySelector('.final-scene').scrollIntoView({behavior:'smooth'})}>ЗАПИСАТЬСЯ НА УРОК</button></header>
 
-    <section className="hero-wrap chapter-wrap" data-nav-tone="orange"><div className="om-stage hero-stage"><div className="ciao-title" aria-label="Ciao"><span className="ciao-letter">C</span><span className="ciao-letter ciao-i" aria-hidden="true"><i className="ciao-i-glyph">I</i></span><span className="ciao-letter">A</span><span className="ciao-letter">O</span><span className="ciao-letter">.</span></div><p className="hero-sub"><span>Кажется, это слово<br/>вы уже знаете.</span></p><span className="hero-scroll">SCORRI <b>↓</b></span></div></section>
+    <section className="hero-wrap chapter-wrap" data-nav-tone="orange"><div className="om-stage hero-stage"><div className="ciao-title" aria-label="Ciao"><span className="ciao-letter">C</span><span className="ciao-letter ciao-i" aria-hidden="true"><i className="ciao-i-glyph">I</i></span><span className="ciao-letter">A</span><span className="ciao-letter">O</span><span className="ciao-letter">.</span></div><p className="hero-sub"><span>Кажется, это слово<br/>вы уже знаете.</span></p><span className="hero-scroll">ПРОКРУТИТЕ <b>↓</b></span></div></section>
 
     <section className="portrait-wrap zaur-story-wrap"><div className="om-stage portrait-stage zaur-story-stage"><div className="zaur-page-sheet"><div className="zaur-story-photo"><Image src="/Zaurino_landing/image/zaur-official.webp" alt="Заур Фархадов — основатель Zaurino Accademia" fill priority sizes="(max-width: 720px) 92vw, 52vw"/></div><div className="zaur-story-shade"/><div className="zaur-thought zaur-thought--one"><h2>А что вы скажете <em>дальше?</em></h2></div><div className="zaur-thought zaur-thought--two"><h2>Вот здесь и начинается <em>язык.</em></h2></div><div className="zaur-identity"><h2 className="zaur-name">ZAUR<br/>FARHADOV</h2><p className="zaur-role">Основатель Zaurino Accademia</p><div className="zaur-credentials"><span>Более 20 лет в Италии.</span><span>Международные отношения.</span><span>Дипломатическая карьера.</span><span>Знание нескольких языков.</span></div><p className="zaur-author-copy">Итальянский много лет был для меня рабочим инструментом — в переговорах, международной среде и реальном общении.</p></div></div></div></section>
 
