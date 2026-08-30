@@ -52,13 +52,13 @@ export default function Experience(){
       .fromTo('.projects-portrait',{opacity:0,scale:1.06},{opacity:1,scale:1,duration:.12},.83)
       .to('.newchapter-stage',{backgroundColor:'#f4efe5',color:'#171914',duration:.01},.85)
       .to('.projects-veil',{opacity:1,duration:.1},.84)
-      .fromTo('.chapter-statement--second',{opacity:0,y:45},{opacity:1,y:0,duration:.1},.87)
-      .to('.chapter-statement--second',{opacity:0,y:-40,duration:.06},.93)
-      .fromTo('.chapter-statement--third',{opacity:0,y:45},{opacity:1,y:0,duration:.08},.94)
-      .to('.chapter-statement--third',{opacity:0,y:-35,duration:.04},1.02)
-      .to('.projects-illustration,.projects-portrait,.projects-veil',{opacity:0,duration:.08},1.03)
-      .to('.newchapter-stage',{backgroundColor:'#26382d',color:'#f4efe5',duration:.08},1.04)
-      .fromTo('.chapter-statement--fourth',{opacity:0,y:35},{opacity:1,y:0,duration:.12},1.08);
+      .fromTo('.chapter-statement--second',{opacity:0,y:45},{opacity:1,y:0,duration:.18},.86)
+      .to('.chapter-statement--second',{opacity:0,y:-40,duration:.1},1.08)
+      .fromTo('.chapter-statement--third',{opacity:0,y:45},{opacity:1,y:0,duration:.18},1.1)
+      .to('.chapter-statement--third',{opacity:0,y:-35,duration:.1},1.34)
+      .to('.projects-illustration,.projects-portrait,.projects-veil',{opacity:0,duration:.1},1.35)
+      .to('.newchapter-stage',{backgroundColor:'#26382d',color:'#f4efe5',duration:.1},1.36)
+      .fromTo('.chapter-statement--fourth',{opacity:0,y:35},{opacity:1,y:0,duration:.18},1.42);
     const understand=gsap.timeline({scrollTrigger:{trigger:'.understand-wrap',start:'top top',end:'bottom bottom',scrub:1}});
     understand.fromTo('.method-question',{opacity:0,y:50},{opacity:1,y:0,duration:.35},0)
       ;

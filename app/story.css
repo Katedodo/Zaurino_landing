@@ -407,6 +407,7 @@
   .chapter-statement--second { left:50%; width:calc(100vw - 32px); transform:translate(-50%,-50%); text-align:center; }
   .chapter-statement { left:16px; width:calc(100vw - 32px); }
   .chapter-statement--second { top:67%; width:calc(100vw - 32px); }
+  .chapter-statement--second { left:50%; transform:translate(-50%,-50%); text-align:center; }
   .chapter-statement--second h2 { max-width:340px; font-size:clamp(34px,10.3vw,41px); line-height:.96; letter-spacing:-.04em; }
   .chapter-statement--second p { max-width:330px; margin-top:16px; font-size:clamp(14px,4.05vw,16px); line-height:1.42; }
   .chapter-statement--third { left:50%; width:calc(100vw - 32px); }
