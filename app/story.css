@@ -174,7 +174,7 @@ footer > span { text-align:center; }
 .chapter-statement--first h2 em { color: var(--orange); }
 .chapter-statement p { max-width: 620px; margin: 28px 0 0; font: italic clamp(19px,1.65vw,25px)/1.35 var(--font-serif); color: #4f554d; text-wrap:balance; }
 .chapter-statement--second p { font-size:0; }
-.chapter-statement--second p::after { content:'Один из них вырос из того, что сопровождало меня больше двадцати лет: Италии, итальянского языка и международного опыта.'; display:block; font:italic clamp(19px,1.65vw,25px)/1.35 var(--font-serif); color:#4f554d; }
+.chapter-statement--second p::after { content:'Один из них вырос из того, что сопровождало меня больше двадцати лет: Италия, итальянский язык, международный опыт.'; display:block; font:italic clamp(19px,1.65vw,25px)/1.35 var(--font-serif); color:#4f554d; }
 .chapter-statement--second,.chapter-statement--third,.chapter-statement--fourth { opacity: 0; }
 .chapter-statement--second { width:min(760px,54vw); }
 .chapter-statement--third { text-align: center; left: 50%; width: min(880px,76vw); transform: translate(-50%,-50%); }
