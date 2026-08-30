@@ -52,7 +52,8 @@
 .footer-logo { display:block; width:30px; height:30px; background:var(--orange); -webkit-mask:url('/Zaurino_landing/image/logo-accademia.png') center/contain no-repeat; mask:url('/Zaurino_landing/image/logo-accademia.png') center/contain no-repeat; }
 .footer-brand>span:last-child { font-size:7px; letter-spacing:.16em; line-height:1.35; }
 .footer-credit { color:rgba(244,239,229,.58) !important; text-decoration:none; transition:color .2s ease; }
-.footer-credit { color:var(--orange) !important; font-weight:500; }
+.footer-credit { color:var(--orange) !important; font-weight:500; font-size:0; }
+.footer-credit::after { content:'Zaurino Web'; font-size:7px; letter-spacing:.16em; }
 .footer-credit:hover { color:var(--ivory) !important; }
 footer > a[href="/privacy"], footer > span { display:none; }
 footer { grid-template-columns:1fr auto; }
