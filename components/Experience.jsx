@@ -17,7 +17,13 @@ const principles=[
 
 export default function Experience(){
   const root=useRef(null);const [meaning,setMeaning]=useState(null);const [methodIndex,setMethodIndex]=useState(0);const [form,setForm]=useState({name:'',contact:'',message:''});const [status,setStatus]=useState('idle');
-  useEffect(()=>{gsap.registerPlugin(ScrollTrigger);if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;const ctx=gsap.context(()=>{
+  useEffect(()=>{
+    gsap.registerPlugin(ScrollTrigger);
+    // Mobile browsers constantly resize the visual viewport while the URL bar
+    // opens/closes. Ignore those tiny resize events so pinned story scenes keep
+    // their measured positions instead of being rebuilt mid-scroll.
+    ScrollTrigger.config({ignoreMobileResize:true});
+    const ctx=gsap.context(()=>{
     const hero=gsap.timeline({scrollTrigger:{trigger:'.hero-wrap',start:'top top',end:'bottom bottom',scrub:1,onUpdate:self=>{const header=document.querySelector('.om-nav');if(header)header.setAttribute('data-tone',self.progress>.72?'beige':'hero')}}});
     hero.to('.ciao-letter:nth-child(1)',{x:'-65vw',rotation:-8,ease:'power2.in'},0)
       .to('.ciao-letter:nth-child(3)',{x:'18vw',y:'-90vh',rotation:10,ease:'power2.in'},0)
@@ -44,7 +50,7 @@ export default function Experience(){
       .fromTo('.zaur-identity',{opacity:0,y:45},{opacity:1,y:0,duration:.18},.68)
       .to('.zaur-identity',{opacity:1,duration:.28},.86)
       .to('.zaur-story-photo img',{scale:1.04},.7);
-    const mobileChapter=matchMedia('(max-width: 720px)').matches;
+    const mobileChapter=window.matchMedia('(max-width: 720px)').matches;
     const chapter=gsap.timeline({scrollTrigger:{trigger:'.newchapter-wrap',start:'top top',end:'bottom bottom',scrub:1}});
     chapter.fromTo('.projects-illustration',{opacity:0,clipPath:'inset(0 0 0 100%)',scale:1.08},{opacity:1,clipPath:'inset(0 0 0 0%)',scale:1,duration:.18},.02)
       .fromTo('.diplomacy-photo-main',{objectPosition:'center center',x:mobileChapter?0:0,scale:mobileChapter?1:1.12},{objectPosition:'center center',x:mobileChapter?'-80vw':0,scale:mobileChapter?1:1.04,ease:'none',duration:.25},.03)
@@ -71,13 +77,21 @@ export default function Experience(){
     const methodTrack=document.querySelector('.method-principles');
     if(methodTrack){
       const cards=methodTrack.querySelectorAll('.method-principle');
-      gsap.to(methodTrack,{x:()=>-(methodTrack.scrollWidth-window.innerWidth+window.innerWidth*.08),ease:'none',scrollTrigger:{trigger:methodTrack,start:'top top',end:()=>`+=${Math.max(900,methodTrack.scrollWidth-window.innerWidth+window.innerWidth*.08)}`,pin:true,scrub:1,invalidateOnRefresh:true,onUpdate:self=>setMethodIndex(Math.min(cards.length-1,Math.floor(self.progress*cards.length)))}});
+      gsap.to(methodTrack,{x:()=>-(methodTrack.scrollWidth-window.innerWidth+window.innerWidth*.08),ease:'none',scrollTrigger:{trigger:methodTrack,start:'top top',end:()=>`+=${Math.max(900,methodTrack.scrollWidth-window.innerWidth+window.innerWidth*.08)}`,pin:true,anticipatePin:1,scrub:1,invalidateOnRefresh:true,onUpdate:self=>setMethodIndex(Math.min(cards.length-1,Math.floor(self.progress*cards.length)))}});
     }
     gsap.from('.final-inner > *',{opacity:0,y:55,stagger:.12,scrollTrigger:{trigger:'.final-scene',start:'top 70%',end:'center center',scrub:1}});
     const nav=document.querySelector('.om-nav');
     const navTones={'.hero-wrap':'hero','.portrait-wrap':'green','.newchapter-wrap':'beige','.understand-wrap':'green','.method-scroll':'orange','.final-scene':'beige'};
     Object.entries(navTones).forEach(([selector,tone])=>gsap.utils.toArray(selector).forEach(section=>ScrollTrigger.create({trigger:section,start:'top 28%',end:'bottom 28%',onEnter:()=>nav?.setAttribute('data-tone',tone),onEnterBack:()=>nav?.setAttribute('data-tone',tone)})));
-  },root);return()=>ctx.revert()},[]);
+    // Re-measure after fonts and priority images have settled. This is
+    // especially important on narrow screens where image aspect ratios alter
+    // the height of each sticky chapter.
+    const refresh=()=>ScrollTrigger.refresh();
+    window.addEventListener('load',refresh,{once:true});
+    requestAnimationFrame(refresh);
+  },root);
+  return()=>{ctx.revert();ScrollTrigger.getAll().forEach(trigger=>trigger.kill())}
+  },[]);
   async function submit(e){e.preventDefault();setStatus('loading');try{const res=await fetch('/api/lead',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(form)});const data=await res.json();if(!res.ok)throw new Error();setStatus(data.demo?'demo':'success')}catch{setStatus('demo')}}
   return <main ref={root} className="oldmoney-root">
     <header className="om-nav" data-tone="hero"><div><span className="om-logo" role="img" aria-label="Zaurino Accademia"/><span>ZAURINO<br/>ACCADEMIA</span></div><button onClick={()=>document.querySelector('.final-scene').scrollIntoView({behavior:'smooth'})}>ЗАПИСАТЬСЯ НА УРОК</button></header>
