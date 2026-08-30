@@ -263,10 +263,7 @@
 .method-scroll-conclusion button i { margin-left: 20px; color: var(--orange); }
 
 @media (max-width:720px) {
-  /* Keep sticky story stages working on iOS Safari. `overflow-x:hidden`
-     creates an implicit scroll container and prevents sticky + ScrollTrigger
-     from progressing; clip hides bleed without changing sticky containment. */
-  .oldmoney-root { overflow-x:clip; }
+  .oldmoney-root { overflow-x:hidden; }
   .chapter-statement h2, .method-question h2, .method-principle-copy h3, .final-inner h2 { max-width:100%; overflow-wrap:break-word; }
   .final-inner>p, .final-price span { overflow-wrap:break-word; }
   .om-logo { width:32px; height:32px; flex-basis:32px; }
@@ -369,12 +366,6 @@
   .method-scroll-conclusion { min-height: 100svh; padding: 12vh 18px; }
   .method-scroll-conclusion p { font-size: 19px; }
   .method-scroll-conclusion h2 { font-size: 17vw; }
-}
-
-@supports (overflow: clip) {
-  @media (max-width:720px) {
-    html, body { overflow-x: clip; }
-  }
 }
 
 @media (max-width:390px) {
