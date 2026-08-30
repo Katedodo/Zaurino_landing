@@ -59,6 +59,7 @@
 .final-inner form label { display:none; }
 .final-inner form button { margin-top:0; padding:19px 22px; background:var(--orange); color:var(--ink); border:1px solid var(--orange); font-size:0; letter-spacing:.13em; transition:background .25s ease,color .25s ease,transform .25s ease; }
 .final-inner form button:hover { background:var(--olive); color:var(--ivory); transform:translateY(-3px); }
+.final-inner form button, .final-inner form button::after { white-space:nowrap; }
 .final-portrait img { object-fit:cover !important; object-position:center; }
 
 .orange-opening {
@@ -279,6 +280,8 @@
 .method-scroll-conclusion button i { margin-left: 20px; color: var(--orange); }
 
 @media (max-width:720px) {
+  .om-stage { height:100dvh; min-height:100svh; }
+  .hero-wrap, .portrait-wrap, .newchapter-wrap, .understand-wrap { background:var(--ivory); }
   .hero-wrap { background:var(--orange); }
   .oldmoney-root { overflow-x:clip; }
   .chapter-statement h2, .method-question h2, .method-principle-copy h3, .final-inner h2 { max-width:100%; overflow-wrap:break-word; }
@@ -298,7 +301,7 @@
   .understand-stage .meaning-options button { padding:7px 0; font-size:11px; }
   .understand-stage .meaning-answer { margin-top:10px; padding-left:10px; }
   .understand-stage .meaning-answer p { margin:4px 0 0; font-size:10px; line-height:1.35; }
-  .final-scene { padding-bottom:120px; }
+  .final-scene { min-height:100dvh; padding-bottom:120px; }
   .final-price { gap:10px; margin-top:20px; }
   .final-price b { font-size:46px; }
   .final-price span { max-width:120px; font-size:7px; line-height:1.35; }
