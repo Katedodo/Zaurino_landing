@@ -24,12 +24,11 @@ export default function Experience(){
     // their measured positions instead of being rebuilt mid-scroll.
     ScrollTrigger.config({ignoreMobileResize:true});
     const ctx=gsap.context(()=>{
-    const mobileChapter=window.matchMedia('(max-width: 720px)').matches;
     const hero=gsap.timeline({scrollTrigger:{trigger:'.hero-wrap',start:'top top',end:'bottom bottom',scrub:1,onUpdate:self=>{const header=document.querySelector('.om-nav');if(header)header.setAttribute('data-tone',self.progress>.72?'beige':'hero')}}});
     hero.to('.ciao-letter:nth-child(1)',{x:'-65vw',rotation:-8,ease:'power2.in'},0)
-      .to('.ciao-letter:nth-child(3)',{x:'18vw',y:mobileChapter?'0vh':'-90vh',rotation:10,ease:'power2.in'},0)
+      .to('.ciao-letter:nth-child(3)',{x:'18vw',y:'-90vh',rotation:10,ease:'power2.in'},0)
       .to('.ciao-letter:nth-child(4)',{x:'66vw',rotation:8,ease:'power2.in'},0)
-      .to('.ciao-letter:nth-child(5)',{x:'30vw',y:mobileChapter?'0vh':'90vh',ease:'power2.in'},0)
+      .to('.ciao-letter:nth-child(5)',{x:'30vw',y:'90vh',ease:'power2.in'},0)
       .to('.hero-sub,.hero-scroll,.cover-meta',{opacity:0},0)
       .to('.ciao-title',{'--cover-lines':0},0)
       .to('.ciao-i-glyph',{rotation:90,transformOrigin:'50% 50%',ease:'power2.inOut'},.22)
@@ -37,7 +36,7 @@ export default function Experience(){
       .to('.ciao-i',{ '--i-open-x':1,duration:.01},.69)
       .to('.ciao-i-glyph',{opacity:0,duration:.01},.69)
       .to('.ciao-i',{ '--i-open-y':1,ease:'power3.inOut'},.7)
-      .to('.hero-stage',{backgroundColor:'#ef5c1a',duration:.01},mobileChapter?.52:.78);
+      .to('.hero-stage',{backgroundColor:'#ef5c1a',duration:.01},.78);
     const portrait=gsap.timeline({scrollTrigger:{trigger:'.portrait-wrap',start:'top top',end:'bottom bottom',scrub:1}});
     portrait.set('.zaur-thought--one',{opacity:1,y:0},0)
       .to('.zaur-thought--one',{opacity:1,duration:.24},0)
@@ -51,6 +50,7 @@ export default function Experience(){
       .fromTo('.zaur-identity',{opacity:0,y:45},{opacity:1,y:0,duration:.18},.68)
       .to('.zaur-identity',{opacity:1,duration:.28},.86)
       .to('.zaur-story-photo img',{scale:1.04},.7);
+    const mobileChapter=window.matchMedia('(max-width: 720px)').matches;
     const chapter=gsap.timeline({scrollTrigger:{trigger:'.newchapter-wrap',start:'top top',end:'bottom bottom',scrub:1}});
     chapter.fromTo('.projects-illustration',{opacity:0,clipPath:'inset(0 0 0 100%)',scale:1.08},{opacity:1,clipPath:'inset(0 0 0 0%)',scale:1,duration:.18},.02)
       .fromTo('.diplomacy-photo-main',{objectPosition:'center center',x:mobileChapter?0:0,scale:mobileChapter?1:1.12},{objectPosition:'center center',x:mobileChapter?'-80vw':0,scale:mobileChapter?1:1.04,ease:'none',duration:.25},.03)
