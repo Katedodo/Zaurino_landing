@@ -47,7 +47,7 @@ export default function Experience(){
       .to('.zaur-story-photo img',{scale:1.04},.7);
     const chapter=gsap.timeline({scrollTrigger:{trigger:'.newchapter-wrap',start:'top top',end:'bottom bottom',scrub:1}});
     chapter.fromTo('.projects-illustration',{opacity:1,clipPath:'inset(0 0 0 0%)',scale:1.03},{opacity:1,clipPath:'inset(0 0 0 0%)',scale:1,duration:.08},0)
-      .fromTo('.diplomacy-photo-main',{objectPosition:mobileChapter?'100% center':'center center',x:0,scale:mobileChapter?1.02:1.12},{objectPosition:mobileChapter?'0% center':'center center',x:0,scale:mobileChapter?1:1.04,ease:'none',duration:mobileChapter?.68:.42},.02)
+      .fromTo('.diplomacy-photo-main',{objectPosition:mobileChapter?'0% center':'center center',x:0,scale:mobileChapter?1.02:1.12},{objectPosition:mobileChapter?'100% center':'center center',x:0,scale:mobileChapter?1:1.04,ease:'none',duration:mobileChapter?.68:.42},.02)
       .to('.diplomacy-photo',{opacity:0,duration:.12},mobileChapter?.84:.58)
       .fromTo('.projects-portrait',{opacity:0,scale:1.06},{opacity:1,scale:1,duration:.16},.25)
       .to('.newchapter-stage',{backgroundColor:'#f4efe5',color:'#171914',duration:.01},.27)
@@ -79,6 +79,7 @@ export default function Experience(){
     Object.entries(navTones).forEach(([selector,tone])=>gsap.utils.toArray(selector).forEach(section=>ScrollTrigger.create({trigger:section,start:'top 28%',end:'bottom 28%',onEnter:()=>nav?.setAttribute('data-tone',tone),onEnterBack:()=>nav?.setAttribute('data-tone',tone)})));
     requestAnimationFrame(()=>ScrollTrigger.refresh());
     window.addEventListener('load',()=>ScrollTrigger.refresh(),{once:true});
+    document.querySelector('.final-inner form')?.setAttribute('novalidate','');
   },root);return()=>ctx.revert()},[]);
   function submit(e){e.preventDefault();const text=`Здравствуйте, Заур! Меня зовут ${form.name}. ${form.message} Мой контакт: ${form.contact}`;window.open(`https://wa.me/393454680636?text=${encodeURIComponent(text)}`,'_blank','noopener,noreferrer');setStatus('success')}
   return <main ref={root} className="oldmoney-root">
