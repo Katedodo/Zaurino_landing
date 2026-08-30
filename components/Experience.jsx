@@ -33,11 +33,8 @@ export default function Experience(){
       .to('.hero-sub,.hero-scroll,.cover-meta',{opacity:0},0)
       .to('.ciao-title',{'--cover-lines':0},0)
       .to('.ciao-i-glyph',{rotation:90,transformOrigin:'50% 50%',ease:'power2.inOut'},.22)
-      .to('.ciao-i-glyph',{scaleY:8,ease:'power3.inOut'},.45)
-      .to('.ciao-i',{ '--i-open-x':1,duration:.01},.69)
-      .to('.ciao-i-glyph',{opacity:0,duration:.01},.69)
-      .to('.ciao-i',{ '--i-open-y':1,ease:'power3.inOut'},.7)
-      .to('.hero-stage',{backgroundColor:'#ef5c1a',duration:.01},mobileChapter?.52:.78);
+      .to('.ciao-i-glyph',{scaleX:76,scaleY:34,ease:'power3.inOut'},.58)
+      .to('.hero-stage',{backgroundColor:'#ef5c1a',duration:.01},mobileChapter?.68:.78);
     const portrait=gsap.timeline({scrollTrigger:{trigger:'.portrait-wrap',start:'top top',end:'bottom bottom',scrub:1}});
     portrait.set('.zaur-thought--one',{opacity:1,y:0},0)
       .to('.zaur-thought--one',{opacity:1,duration:.24},0)
