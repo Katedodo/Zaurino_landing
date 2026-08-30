@@ -51,6 +51,8 @@
 .footer-brand { display:flex; align-items:center; gap:9px; }
 .footer-logo { display:block; width:30px; height:30px; background:var(--orange); -webkit-mask:url('/Zaurino_landing/image/logo-accademia.png') center/contain no-repeat; mask:url('/Zaurino_landing/image/logo-accademia.png') center/contain no-repeat; }
 .footer-brand>span:last-child { font-size:7px; letter-spacing:.16em; line-height:1.35; }
+.footer-credit { color:rgba(244,239,229,.58) !important; text-decoration:none; transition:color .2s ease; }
+.footer-credit:hover { color:var(--orange) !important; }
 .final-inner textarea { display:block; width:100%; min-height:76px; resize:vertical; border:0; border-bottom:1px solid var(--line); background:transparent; padding:12px 0; color:var(--ink); font-size:13px; line-height:1.45; }
 .final-inner textarea:focus { outline:0; border-color:var(--orange); }
 .final-inner form button { font-size:0; }
