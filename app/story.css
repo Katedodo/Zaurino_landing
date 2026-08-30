@@ -305,6 +305,8 @@
   .final-price { gap:10px; margin-top:20px; }
   .final-price b { font-size:46px; }
   .final-price span { max-width:120px; font-size:7px; line-height:1.35; }
+  .final-inner form { margin-left:auto; margin-right:auto; }
+  .final-inner form button { justify-content:center; text-align:center; }
   .final-inner>p.final-motivation { margin:8px 0 18px; font-size:25px; line-height:1.05; }
   .footer-logo { width:26px; height:26px; }
   .zaur-story-wrap { height: 325svh; }
@@ -341,6 +343,8 @@
   .chapter-statement h2 { margin-top:12px; font-size:clamp(40px,11.5vw,58px); line-height:.93; }
   .chapter-statement p { max-width:34rem; margin-top:20px; font-size:clamp(16px,4.5vw,20px); line-height:1.38; }
   .chapter-statement--second { top:68%; width:calc(100vw - 40px); }
+  .chapter-statement--second { left:50%; transform:translate(-50%,-50%); text-align:center; }
+  .chapter-statement--second p { margin-left:auto; margin-right:auto; }
   .chapter-statement--third { left: 50%; right: auto; top:68%; width: calc(100vw - 40px); }
   .chapter-statement--third small { display:block; margin-bottom:18px; }
   .chapter-statement--third h2 { margin:0; font-size:clamp(39px,11vw,54px); line-height:.96; }
@@ -398,6 +402,7 @@
 }
 
 @media (max-width:390px) {
+  .chapter-statement--second { left:50%; width:calc(100vw - 32px); transform:translate(-50%,-50%); text-align:center; }
   .chapter-statement { left:16px; width:calc(100vw - 32px); }
   .chapter-statement--second { top:67%; width:calc(100vw - 32px); }
   .chapter-statement--second h2 { max-width:340px; font-size:clamp(34px,10.3vw,41px); line-height:.96; letter-spacing:-.04em; }
