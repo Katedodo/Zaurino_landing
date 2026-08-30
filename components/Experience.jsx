@@ -83,7 +83,7 @@ export default function Experience(){
     requestAnimationFrame(()=>ScrollTrigger.refresh());
     window.addEventListener('load',()=>ScrollTrigger.refresh(),{once:true});
   },root);return()=>ctx.revert()},[]);
-  function submit(e){e.preventDefault();const text=`Здравствуйте, Заур! Меня зовут ${form.name}. ${form.message} Мой контакт: ${form.contact}`;window.open(`https://wa.me/393454680636?text=${encodeURIComponent(text)}`,'_blank','noopener,noreferrer');setStatus('success')}
+  function submit(e){e.preventDefault();const text=`Здравствуйте, Заур! Меня зовут ${form.name}. ${form.message} Мой контакт: ${form.contact}`;window.open(`https://wa.me/393454680636?text=${encodeURIComponent(text)}`,'_blank','noopener,noreferrer')}
   return <main ref={root} className="oldmoney-root">
     <header className="om-nav" data-tone="hero"><div><span className="om-logo" role="img" aria-label="Zaurino Accademia"/><span>ZAURINO<br/>ACCADEMIA</span></div><button onClick={()=>document.querySelector('.final-scene').scrollIntoView({behavior:'smooth'})}>ЗАПИСАТЬСЯ НА УРОК</button></header>
 
