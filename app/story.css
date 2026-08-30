@@ -436,8 +436,8 @@
 .method-principle:last-child { margin-right:8vw; }
 @media (max-width:720px) {
   .method-principles { width:max-content; }
-  .method-principle { flex:0 0 84vw; min-height:76svh; margin-right:7vw; padding:10vh 20px 8vh; }
-  .method-principle:last-child { margin-right:16vw; }
+  .method-principle { flex:0 0 100vw; min-height:76svh; margin-right:0; padding:10vh 20px 8vh; }
+  .method-principle:last-child { margin-right:0; }
   .method-principle-number { margin-bottom:5vh; }
 }
 
