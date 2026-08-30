@@ -72,7 +72,7 @@
 .zaur-thought--three { color: var(--ivory); }
 .zaur-thought--three p { margin: 0; font: italic 30px/1.2 var(--font-serif); }
 .zaur-thought--three h2 { color: var(--orange); }
-.zaur-identity { top: auto; bottom: 10vh; width: min(760px,52vw); transform: none; color: var(--ink); }
+.zaur-identity { top: auto; bottom: 10vh; width: min(760px,calc(48vw - 7vw)); transform: none; color: var(--ink); }
 .zaur-identity h2 { margin: 18px 0 12px; font: 500 clamp(92px,14vw,210px)/.68 var(--font-serif); letter-spacing: -.07em; }
 .zaur-identity p { margin: 0; padding-top: 14px; width: min(370px,80vw); border-top: 1px solid var(--orange); font-size: 12px; letter-spacing: .08em; }
 .zaur-identity .zaur-profession { margin: 16px 0 25px; font: 400 clamp(46px,5.7vw,86px)/.92 var(--font-serif); letter-spacing: -.045em; }
@@ -283,7 +283,7 @@
   .final-inner>p.final-motivation { margin:8px 0 18px; font-size:25px; line-height:1.05; }
   .footer-logo { width:26px; height:26px; }
   .zaur-story-wrap { height: 325svh; }
-  .zaur-story-photo { top: auto; bottom: 0; width: 94%; height: 51%; }
+  .zaur-story-photo { top: auto; bottom: 0; width: 94%; height: 42%; }
   .zaur-story-photo img { object-position: center bottom; }
   .zaur-story-shade { top: auto; bottom: 0; width: 86%; height: 50%; clip-path: polygon(17% 0,100% 0,100% 100%,0 100%); }
   .zaur-thought,.zaur-identity { left: 18px; right: 18px; width: auto; }
@@ -292,7 +292,7 @@
   .zaur-thought p { width: 90%; font-size: 13px; }
   .zaur-thought--three { top: auto; bottom: 12vh; transform: none; }
   .zaur-thought--three p { font-size: 21px; }
-  .zaur-identity { top: 9vh; bottom: auto; width: auto; }
+  .zaur-identity { top: 7vh; bottom: auto; width: auto; max-height: 48%; padding-bottom: 14px; background: var(--ivory); }
   .zaur-identity h2 { font-size: 24vw; }
   .zaur-identity p { font-size: 10px; }
   .zaur-identity .zaur-name { margin-bottom: 10px; font-size: 17vw; }
