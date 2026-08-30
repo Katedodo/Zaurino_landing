@@ -61,7 +61,7 @@ export default function Experience(){
       .fromTo('.chapter-statement--fourth',{opacity:0,y:35},{opacity:1,y:0,duration:.16},.82);
     const understand=gsap.timeline({scrollTrigger:{trigger:'.understand-wrap',start:'top top',end:'bottom bottom',scrub:1}});
     understand.fromTo('.method-question',{opacity:0,y:50},{opacity:1,y:0,duration:.35},0)
-      .fromTo('.meaning-demo',{opacity:0,y:60},{opacity:1,y:0,duration:.35},.42);
+      ;
     gsap.to('.method-scroll-marquee',{xPercent:-28,ease:'none',scrollTrigger:{trigger:'.method-scroll',start:'top bottom',end:'bottom top',scrub:1}});
     gsap.utils.toArray('.method-principle').forEach(item=>{
       const number=item.querySelector('.method-principle-number');const copy=item.querySelector('.method-principle-copy');
