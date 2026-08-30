@@ -52,8 +52,9 @@
 .footer-logo { display:block; width:30px; height:30px; background:var(--orange); -webkit-mask:url('/Zaurino_landing/image/logo-accademia.png') center/contain no-repeat; mask:url('/Zaurino_landing/image/logo-accademia.png') center/contain no-repeat; }
 .footer-brand>span:last-child { font-size:7px; letter-spacing:.16em; line-height:1.35; }
 .footer-credit { color:rgba(244,239,229,.58) !important; text-decoration:none; transition:color .2s ease; }
-.footer-credit { color:var(--orange) !important; font-weight:500; font-size:0; }
-.footer-credit::after { content:'Zaurino Web'; font-size:7px; letter-spacing:.16em; }
+.footer-credit { color:var(--ivory) !important; font-weight:500; font-size:0; }
+.footer-credit::after { content:'Zaurino Web'; display:inline-block; color:var(--ivory); font-size:7px; letter-spacing:.16em; background:linear-gradient(110deg,var(--ivory) 35%,#fff 48%,var(--ivory) 61%); background-size:220% 100%; -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; transition:background-position .7s ease; }
+.footer-credit:hover::after { background-position:100% 0; }
 .footer-credit:hover { color:var(--ivory) !important; }
 footer > a[href="/privacy"], footer > span { display:none; }
 footer { grid-template-columns:1fr auto; }
