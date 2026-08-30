@@ -63,6 +63,7 @@
 .final-inner form button:hover { background:var(--orange); color:var(--ink); border-color:var(--orange); transform:translateY(-3px); }
 .final-inner form button, .final-inner form button::after { white-space:nowrap; }
 .final-inner > p { display:none; }
+.final-inner > small { display:none; }
 .final-inner { max-width:680px; }
 .final-inner h2 { max-width:680px; }
 footer { display:grid; grid-template-columns:1.3fr auto 1fr auto; align-items:center; gap:28px; padding:28px max(20px,calc((100vw - 1300px)/2)); }
