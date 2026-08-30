@@ -173,6 +173,8 @@ footer > span { text-align:center; }
 .chapter-statement h2 em { color: var(--orange); font-style: italic; }
 .chapter-statement--first h2 em { color: var(--orange); }
 .chapter-statement p { max-width: 620px; margin: 28px 0 0; font: italic clamp(19px,1.65vw,25px)/1.35 var(--font-serif); color: #4f554d; text-wrap:balance; }
+.chapter-statement--second p { font-size:0; }
+.chapter-statement--second p::after { content:'Один из них вырос из опыта, который сопровождал меня больше двадцати лет: жизни в Италии, итальянского языка и международного общения.'; display:block; font:italic clamp(19px,1.65vw,25px)/1.35 var(--font-serif); color:#4f554d; }
 .chapter-statement--second,.chapter-statement--third,.chapter-statement--fourth { opacity: 0; }
 .chapter-statement--second { width:min(760px,54vw); }
 .chapter-statement--third { text-align: center; left: 50%; width: min(880px,76vw); transform: translate(-50%,-50%); }
@@ -361,6 +363,7 @@ footer > span { text-align:center; }
   .chapter-statement { left: 20px; top: 24%; width: calc(100vw - 40px); }
   .chapter-statement h2 { margin-top:12px; font-size:clamp(40px,11.5vw,58px); line-height:.93; }
   .chapter-statement p { max-width:34rem; margin-top:20px; font-size:clamp(16px,4.5vw,20px); line-height:1.38; }
+  .chapter-statement--second p::after { font-size:clamp(16px,4.5vw,20px); line-height:1.38; }
   .chapter-statement--second { top:68%; width:calc(100vw - 40px); }
   .chapter-statement--second { left:50%; transform:translate(-50%,-50%); text-align:center; }
   .chapter-statement--second p { margin-left:auto; margin-right:auto; }
