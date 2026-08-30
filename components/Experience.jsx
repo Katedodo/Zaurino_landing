@@ -47,7 +47,7 @@ export default function Experience(){
       .to('.zaur-story-photo img',{scale:1.04},.7);
     const chapter=gsap.timeline({scrollTrigger:{trigger:'.newchapter-wrap',start:'top top',end:'bottom bottom',scrub:1}});
     chapter.fromTo('.projects-illustration',{opacity:1,clipPath:'inset(0 0 0 0%)',scale:1.03},{opacity:1,clipPath:'inset(0 0 0 0%)',scale:1,duration:.08},0)
-      .fromTo('.diplomacy-photo-main',{objectPosition:'center center',x:mobileChapter?0:0,scale:mobileChapter?1.02:1.12},{objectPosition:'center center',x:mobileChapter?'-80vw':0,scale:mobileChapter?1:1.04,ease:'none',duration:.42},.02)
+      .fromTo('.diplomacy-photo-main',{objectPosition:mobileChapter?'100% center':'center center',x:0,scale:mobileChapter?1.02:1.12},{objectPosition:mobileChapter?'0% center':'center center',x:0,scale:mobileChapter?1:1.04,ease:'none',duration:.42},.02)
       .to('.diplomacy-photo',{opacity:0,duration:.12},.58)
       .fromTo('.projects-portrait',{opacity:0,scale:1.06},{opacity:1,scale:1,duration:.16},.25)
       .to('.newchapter-stage',{backgroundColor:'#f4efe5',color:'#171914',duration:.01},.27)
