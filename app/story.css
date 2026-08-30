@@ -48,6 +48,10 @@
 .final-inner>p:not(.final-motivation) { color:rgba(23,25,20,.68); }
 .final-price { color:var(--ink); }
 .final-price span { color:rgba(23,25,20,.6); }
+.final-price b { font-size:0 !important; }
+.final-price b::after { content:'100 €'; font:500 clamp(54px,6vw,84px)/.9 var(--font-serif); color:var(--orange); letter-spacing:-.04em; }
+.final-price span { font-size:0 !important; max-width:220px; }
+.final-price span::after { content:'индивидуальный урок · 90 минут'; display:block; font-size:9px; line-height:1.4; letter-spacing:.16em; text-transform:uppercase; color:rgba(23,25,20,.6); }
 .footer-brand { display:flex; align-items:center; gap:9px; }
 .footer-logo { display:block; width:30px; height:30px; background:var(--orange); -webkit-mask:url('/Zaurino_landing/image/logo-accademia.png') center/contain no-repeat; mask:url('/Zaurino_landing/image/logo-accademia.png') center/contain no-repeat; }
 .footer-brand>span:last-child { font-size:7px; letter-spacing:.16em; line-height:1.35; }
